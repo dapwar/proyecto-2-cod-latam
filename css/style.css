@@ -1,0 +1,142 @@
+*{
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+   
+    
+}
+body{
+
+    background-color: #fbfbfb;
+    font-size: 18px;
+    line-height: 1.2;
+    
+   
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+header{
+    display: flex;
+     height: 90px;
+    align-items:center;
+    justify-content:space-between; 
+    position:fixed;
+    top: 0;
+    left: 0;
+    padding: 16px;
+    width: 150%;
+   box-shadow: 1px 3px 10px -5px hsl(0, 32%, 36%);
+
+}
+.menu{
+    margin: 40px;
+    padding: 10px;
+    display: block;
+    justify-content: baseline;
+}
+
+main{
+   
+    margin:20;
+    max-width:auto;
+}
+
+.inicio, .contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 10px;
+    overflow: hidden;
+
+}
+.logoAvatar{
+  
+    border-radius:200px;
+    border-color: #af599e;
+    border-style: solid;
+    width: 400px;
+    height: 400px;
+
+}
+
+h1{
+
+    font-size: 36px;
+}
+
+p{
+    text-align: center;
+    width: 460px;
+    height: 50px;
+}
+h2{
+    font-size: 28px;
+}
+
+.box{  
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    width:200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #af599e;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fbfbfb;
+    line-height: 80px 
+}
+
+.botonDescarga{
+
+    transition: all 400ms ease-out;
+    align-items: center;
+}
+
+.button .botonDescarga:hover{
+    transform: scale(1.1);
+}
+
+#botonDescarga:link, #botonDescarga:visited{
+    text-decoration: none;
+}
+
+#botonDescarga, #botonDescarga:hover{
+    color: #fbfbfb;
+}
+
+.hablemos,h2{
+    background-color: rgba(175,89,158,0.3);
+    border-radius: 5px;
+    width: 460px;
+    height: 50px;
+    margin-bottom: auto;
+    text-align: center;
+
+}
+
+.imgBox{
+    width: 50px;
+    margin: 20px;
+}
+h3{
+    color:#fcf7f7;
+    text-align: center;
+    font-size: 18px;
+}
+footer{
+    height: 90px;
+    background-color: #af599e;
+    padding: 10px;
+}
