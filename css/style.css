@@ -3,86 +3,191 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
-   
-    
+    scroll-behavior: smooth;   
 }
-body{
 
-    background-color: #fbfbfb;
+body{
+   background-color: #fbfbfb;
     font-size: 18px;
-    line-height: 1.2;
-    
-   
+    line-height: 1.2;  
 }
-.logo{
+
+.logo {
     display: flex;
     width: 170px;
     height: 125px;
-    justify-content: baseline;
+    justify-content:space-around;
+    align-items: center; 
 }
 
-header{
-    display: flex;
+.header{
+    display:flex;
      height: 130px;
     align-items:center;
-    justify-content:space-between; 
+  
     position:fixed;
     top: 0;
     left: 0;
     padding: 16px;
     width: 150%;
    box-shadow: 1px 3px 10px -5px hsl(0, 32%, 36%);
-
+   background: #0c193d;
+   z-index: 1;
 }
+
 .menu{
-    margin: auto;
-    padding: auto;
     display: block;
-    justify-content: baseline;
+    /*justify-content: space-around;*/
+    align-items: center;
 }
 
-main{
+.menu a{
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 700;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    font-weight: 700;
+    color: white;
+}
+
+a:hover{
+    text-decoration: underline palevioletred;
+}
+#menuDesktop{
+   display: none;
+}
+
+#menuMobile{
+    display: flex;
+    width: auto;
+}
+
+@media(min-width: 576px){
+    #menuDesktop{
+        display: flex;
+    }
+    #menuMobile{
+        display: none;
+       width: auto; 
+    }
+}
+
+/*burguer*/
+#burguer{
+    min-width: 20px;
+    min-height: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content:space-around;
+    cursor: pointer;
+}
+
+#burguer span{
+    border-radius: 5px;
+    background-color: #fbfbfb;
+    width: 100%;
+    height: 2px;
+    transition: all 300ms ease-out;
+}
+
+/*active*/
+#burguer.active.line1{
+    opacity: 0;
+    width: 0;
+}
+#burguer.active.line2{
+    transform: translateY(2.5px) rotate(45deg);
+}
+#burguer.active.line3{
+    transform: translateY(-2px) rotate(-45deg);
+}
+/*menu despleglable*/
+#menuMobile div:nth-child(2){
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fbfbfb;
+    width: 100vw;
+    height: 0px;
+    position: fixed;
+    top:80px;
+    left: 0px;
+    transition: all 250ms ease-out;
+}
+
+#menuMobile div.open:nth-child(2){
+    height: 100px;
+}
+ main{
    
     margin:20;
     max-width:auto;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .inicio, .contacto{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: arrow;
+   /* align-items: center;*/
     padding-top: 150px;
     padding-bottom: 10px;
     overflow: hidden;
-
+    min-height: 100vh;
 }
+img{
+    max-width: 100%;
+}
+
 .logoAvatar{
     padding: 10px;
     border-radius:800px;
     border-color: #af599e;
     border-style: solid;
     width: 300px;
-    height: 300px;
+    height: 300px; 
     margin: 50px;
+    
 }
 
-h1{
+.presentacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
 
+/*.presentacion p{
+    padding: 20px;
+}*/
+
+h1{
     font-size: 36px;
-    padding: 15px;
+   text-decoration: underline wavy hotpink;
 }
 
 p{
     text-align: center;
-    width: 460px;
+    /*width: 460px;
     height: 50px;
     padding: 10px;
-    margin-bottom: 80px;
+    margin-bottom: 80px;*/
 }
 h2{
     font-size: 28px;
-    text-align: center;
+   /* text-align: center;*/
 }
 
 .box{  
@@ -105,7 +210,6 @@ h2{
 }
 
 .botonDescarga{
-
     transition: all 400ms ease-out;
     align-items: center;
 }
@@ -123,15 +227,22 @@ h2{
 }
 
 .hablemos{
+    display: flex;
+    flex-direction: column;
     background-color: rgba(175,89,158,0.3);
     border-radius: 5px;
     width: 400px;
     height: 130px;
     /*margin-bottom: auto;*/
-    text-align: center;
-    padding: 10px;
+    padding: 10px 50px;
+    text-align: center ;
+    justify-content: center;
 }
 
+#contacto{
+    display: flex;
+    justify-content: center;
+}
 
 .imgBox{
     width: 50px;
@@ -144,6 +255,9 @@ h3{
 }
 footer{
     height: 90px;
-    background-color: #af599e;
+    background-color: #0c193d;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
