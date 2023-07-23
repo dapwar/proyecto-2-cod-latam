@@ -24,20 +24,19 @@ body{
     display:flex;
      height: 130px;
     align-items:center;
-  
     position:fixed;
     top: 0;
     left: 0;
     padding: 16px;
-    width: 150%;
+    width: 100%;
    box-shadow: 1px 3px 10px -5px hsl(0, 32%, 36%);
    background: #0c193d;
    z-index: 1;
+   justify-content: space-between;
 }
 
 .menu{
     display: block;
-    /*justify-content: space-around;*/
     align-items: center;
 }
 
@@ -62,22 +61,18 @@ a:hover{
 }
 #menuDesktop{
    display: none;
+   right: 40%;
 }
 
 #menuMobile{
     display: flex;
     width: auto;
+    flex-direction: row;
 }
 
-@media(min-width: 576px){
-    #menuDesktop{
-        display: flex;
-    }
-    #menuMobile{
-        display: none;
-       width: auto; 
-    }
-}
+
+
+
 
 /*burguer*/
 #burguer{
@@ -128,6 +123,8 @@ a:hover{
 #menuMobile div.open:nth-child(2){
     height: 100px;
 }
+
+
  main{
    
     margin:20;
@@ -137,10 +134,19 @@ a:hover{
     margin: auto;
 }
 
-.inicio, .contacto{
+.inicio{
     display: flex;
-    flex-direction: arrow;
-   /* align-items: center;*/
+    flex-direction: column; 
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    min-height: 100vh;
+    
+}
+.contacto{
+    display: flex;
+    flex-direction: row; 
     padding-top: 150px;
     padding-bottom: 10px;
     overflow: hidden;
@@ -163,31 +169,28 @@ img{
 
 .presentacion{
     display: flex;
-    flex-direction: column;
+   flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
 
-/*.presentacion p{
-    padding: 20px;
-}*/
-
 h1{
     font-size: 36px;
    text-decoration: underline wavy hotpink;
+   padding: 15px;
 }
 
-p{
+.inicioP{
     text-align: center;
     /*width: 460px;
-    height: 50px;
-    padding: 10px;
-    margin-bottom: 80px;*/
+    height: 50px;*/
+    padding: 15px;
+    margin-bottom: 80px;
+    line-height: 1.5;
 }
 h2{
     font-size: 28px;
-   /* text-align: center;*/
 }
 
 .box{  
@@ -233,10 +236,13 @@ h2{
     border-radius: 5px;
     width: 400px;
     height: 130px;
-    /*margin-bottom: auto;*/
     padding: 10px 50px;
     text-align: center ;
     justify-content: center;
+}
+.hablemosP{
+    text-align: center;
+    line-height: 1.5;
 }
 
 #contacto{
@@ -260,4 +266,11 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@media(min-width: 1024px){
+    .inicio{
+        display: row;
+      
+    }
+  
 }
